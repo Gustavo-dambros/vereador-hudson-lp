@@ -11,30 +11,33 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header" id="topo">
   <div class="container header-inner">
-    <a class="brand" href="#topo">
-      <span class="brand__mark">HM</span>
-      <span class="brand__name">Hudson <strong>Moreschi</strong></span>
+    <a class="brand" href="#topo" aria-label="Hudson Moreschi, vereador de Cascavel">
+      <span class="brand__mark" aria-hidden="true">HM</span>
+      <span class="brand__copy">
+        <span class="brand__name">Hudson <strong>Moreschi</strong></span>
+        <span class="brand__role">Vereador · Cascavel/PR</span>
+      </span>
     </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#propostas">Prioridades</a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#propostas">Propostas</a>
       <a href="#projetos">Projetos</a>
       <a href="#sobre">Trajetória</a>
       <a href="#jornada">Jornada</a>
       <a href="#gabinete">Gabinete</a>
       <a href="#participe">Participe</a>
+      <a class="btn btn--solid header-cta" href="https://wa.me/5545999531462" target="_blank" rel="noopener">Fale com o Hudson</a>
     </nav>
-    <a class="btn btn--solid header-cta" href="https://wa.me/5545999531462" target="_blank" rel="noopener">Fale no Zap</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<main>
-  <!-- HERO STATIC — copy à direita, como no site analisado -->
+<main id="conteudo">
+  <!-- HERO -->
   <section class="hero-static" id="inicio">
     <div class="hero-static__media" aria-hidden="true">
       <picture>
@@ -45,35 +48,12 @@
     </div>
     <div class="container hero-static__layout">
       <div class="hero-static__copy">
-        <span class="hero-static__kicker">CASCAVEL, FAMÍLIA E TRABALHO</span>
         <h1 id="heroTitle"><span class="hero-title__line1">Cascavel</span><span>pra frente</span></h1>
         <p>Servidor público há 18 anos, ex-Secretário de Assistência Social. Agora, vereador pelo povo de Cascavel.</p>
         <div class="hero-static__actions">
-          <a href="https://wa.me/5545999531462" target="_blank" rel="noopener" class="btn hero-static__primary">FALE NO WHATSAPP</a>
-          <a href="#propostas" class="hero-static__donate">CONHEÇA AS PROPOSTAS</a>
+          <a href="https://wa.me/5545999531462" target="_blank" rel="noopener" class="btn hero-static__primary">Falar com o gabinete</a>
+          <a href="#propostas" class="hero-static__donate">Ver áreas de atuação</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AGENDA — "o que você procura?" com chips -->
-  <section class="agenda-home-section" id="agenda">
-    <div class="container">
-      <div class="section-head section-head--split">
-        <div>
-          <span class="eyebrow"><span class="eyebrow__dot"></span>Navegue</span>
-          <h2>O que você procura?</h2>
-        </div>
-        <p class="section-head__note">Tudo sobre o mandato do vereador Hudson Moreschi em um só lugar.</p>
-      </div>
-      <div class="agenda-chips reveal">
-        <a class="chip" href="#sobre">Quem é Hudson</a>
-        <a class="chip" href="#propostas">Prioridades</a>
-        <a class="chip" href="#projetos">Projetos</a>
-        <a class="chip" href="#jornada">Jornada</a>
-        <a class="chip" href="#gabinete">Gabinete</a>
-        <a class="chip" href="#newsletter">Newsletter</a>
-        <a class="chip chip--solid" href="https://wa.me/5545999531462" target="_blank" rel="noopener">WhatsApp do Gabinete</a>
       </div>
     </div>
   </section>
@@ -82,86 +62,50 @@
   <section class="trajectory trajectory--editorial" id="sobre">
     <div class="container">
       <div class="trajectory__grid">
-        <div class="section-copy reveal">
-          <span class="eyebrow"><span class="eyebrow__dot"></span>Quem sou eu</span>
-          <h2>Nascido e criado em <em>Cascavel</em></h2>
-          <p>Sou Hudson Moreschi. Casado com a Débora e pai da Júlia. Engenheiro de Produção Agroindustrial e servidor público municipal há <strong>18 anos</strong> — todo esse período dedicado à política de Assistência Social.</p>
-          <p>De janeiro de 2017 a abril de 2024, fui <strong>Secretário Municipal de Assistência Social</strong> de Cascavel, uma das maiores e mais importantes pastas do município, na gestão do prefeito Leonaldo Paranhos.</p>
-          <p>Com a mesma vontade e determinação de sempre, sigo motivado nesta nova caminhada como vereador, focado no desenvolvimento da nossa cidade.</p>
-          <p class="trajectory__highlight"><strong>Podemos transformar a vida das pessoas e torná-las ainda mais felizes!</strong></p>
+        <div class="section-copy">
+          <h2>Uma trajetória ligada à <em>Assistência Social</em></h2>
+          <p>Hudson Moreschi é engenheiro de Produção Agroindustrial e servidor público municipal há 18 anos, com atuação na política de Assistência Social.</p>
+          <p>De 2017 a 2024, foi secretário municipal de Assistência Social de Cascavel. Hoje, exerce mandato como vereador na 18ª Legislatura (2025–2028).</p>
+          <a class="text-link" href="https://www.camaracascavel.pr.gov.br/a-camara/vereadores/hudson-marcio-moreschi-junior/" target="_blank" rel="noopener">Consultar perfil oficial na Câmara <span aria-hidden="true">↗</span></a>
         </div>
-        <figure class="photo-card reveal">
-          <img src="assets/img/hudson-oficial.jpg" alt="Vereador Hudson Moreschi na tribuna da Câmara Municipal de Cascavel">
-          <figcaption>Hudson Moreschi · Plenário da Câmara de Cascavel</figcaption>
+        <figure class="photo-card">
+          <img src="assets/img/hudson-oficial.jpg" alt="Hudson Moreschi participa de uma sessão na Câmara Municipal de Cascavel" loading="lazy">
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- PROPOSTAS — carrossel horizontal com círculos decorativos -->
+  <!-- REGISTROS PESSOAIS -->
+  <section class="human-section" id="alem-do-gabinete">
+    <div class="container human-section__grid">
+      <div class="human-section__copy">
+        <h2>Fora do <em>plenário</em></h2>
+        <p>Do trabalho diante do notebook a um registro pessoal em que Hudson aparece usando uma medalha.</p>
+      </div>
+      <div class="human-section__gallery" role="group" aria-label="Hudson em momentos fora do plenário">
+        <img src="assets/img/sem-legenda/imagem_trabalhando2-sem-legenda.jpg" alt="Hudson Moreschi concentrado diante de um notebook" loading="lazy">
+        <img src="assets/img/sem-legenda/vereador_e_prefeito-sem-legenda.jpg" alt="Hudson Moreschi usando uma medalha ao lado de outra pessoa" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO -->
   <section class="proposals" id="propostas">
     <div class="container">
       <div class="section-head section-head--split">
         <div>
-          <span class="eyebrow"><span class="eyebrow__dot"></span>Eixos de atuação</span>
-          <h2>Propostas para <em>Cascavel</em></h2>
-        </div>
-        <div class="proposal-arrows">
-          <button class="arrow" id="propPrev" aria-label="Anterior">←</button>
-          <button class="arrow" id="propNext" aria-label="Próxima">→</button>
+          <h2>Áreas de atuação em <em>Cascavel</em></h2>
         </div>
       </div>
     </div>
     <div class="container proposal-stage">
-      <div class="proposal-track" id="proposalTrack">
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--green"><span>01</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Assistência Social</span>
-            <h3>Proteção de quem mais precisa</h3>
-            <p>Experiência de quem dirigiu a maior pasta social da cidade: fiscalização e defesa das políticas de assistência, do berçário à terceira idade.</p>
-          </div>
-        </article>
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--purple"><span>02</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Desenvolvimento</span>
-            <h3>Cascavel crescendo com planejamento</h3>
-            <p>Infraestrutura, mobilidade e trabalho coordenado com os demais poderes para a cidade avançar.</p>
-          </div>
-        </article>
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--purple2"><span>03</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Família</span>
-            <h3>Família cascalense em primeiro lugar</h3>
-            <p>Apoio a programas e projetos que fortalecem a família, do berçário à terceira idade.</p>
-          </div>
-        </article>
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--green2"><span>04</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Agroindústria</span>
-            <h3>Visão técnica a serviço do agro</h3>
-            <p>Engenheiro de produção agroindustrial a serviço do setor que move a economia regional.</p>
-          </div>
-        </article>
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--purple"><span>05</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Servidores</span>
-            <h3>Defesa do funcionalismo</h3>
-            <p>Defesa do servidor público municipal — categoria da qual ele mesmo faz parte há 18 anos.</p>
-          </div>
-        </article>
-        <article class="proposal-card">
-          <div class="proposal-card__media proposal-card__media--green"><span>06</span></div>
-          <div class="proposal-copy">
-            <span class="proposal-card__tag">Escuta ativa</span>
-            <h3>Gabinete de portas abertas</h3>
-            <p>Bairros, entidades, comércio e moradores orientando cada passo do mandato.</p>
-          </div>
-        </article>
+      <div class="proposal-list">
+        <article class="proposal-item"><h3>Assistência Social</h3><p>Fiscalização e defesa das políticas de assistência, do berçário à terceira idade.</p></article>
+        <article class="proposal-item"><h3>Desenvolvimento urbano</h3><p>Infraestrutura, mobilidade e planejamento para Cascavel.</p></article>
+        <article class="proposal-item"><h3>Famílias</h3><p>Apoio a programas e projetos que fortalecem as famílias.</p></article>
+        <article class="proposal-item"><h3>Agroindústria</h3><p>Contribuição técnica ao setor regional, ligada à formação de Hudson em Produção Agroindustrial.</p></article>
+        <article class="proposal-item"><h3>Serviço público</h3><p>Defesa dos servidores municipais, área em que Hudson também tem experiência profissional.</p></article>
+        <article class="proposal-item"><h3>Participação dos moradores</h3><p>Escuta de bairros, entidades, comércio e moradores pelo gabinete.</p></article>
       </div>
     </div>
   </section>
@@ -249,30 +193,41 @@
     </div>
   </section>
 
+  <!-- ACOMPANHE O MANDATO -->
+  <section class="news-home-section" id="noticias">
+    <div class="container news-follow">
+      <div class="section-head">
+        <h2>Acompanhe o <em>mandato</em></h2>
+        <p class="section-head__note">Consulte os canais oficiais para ver a atividade parlamentar e as atualizações do gabinete.</p>
+      </div>
+      <div class="follow-links">
+        <a href="https://www.camaracascavel.pr.gov.br/a-camara/vereadores/hudson-marcio-moreschi-junior/" target="_blank" rel="noopener"><span><strong>Câmara Municipal de Cascavel</strong><small>Perfil e atividade parlamentar</small></span><span aria-hidden="true">↗</span></a>
+        <a href="https://www.instagram.com/hudsonjrmoreschi" target="_blank" rel="noopener"><span><strong>Instagram</strong><small>@hudsonjrmoreschi</small></span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
   <!-- JORNADA -->
   <section class="journey-section" id="jornada">
     <div class="container">
       <div class="section-head section-head--split">
-        <div>
-          <span class="eyebrow"><span class="eyebrow__dot"></span>Jornada</span>
-          <h2>Acompanhe a <em>jornada</em></h2>
-        </div>
+        <div><h2>Trajetória e <em>contato</em></h2></div>
       </div>
       <div class="journey-grid">
-        <div class="journey-social reveal">
-          <h3>Marcos da trajetória</h3>
-          <div class="journey-cards">
-            <article><span class="journey-year">18 anos</span><span class="journey-label">Servidor público municipal, dedicado à Assistência Social</span></article>
-            <article><span class="journey-year">2017–2024</span><span class="journey-label">Secretário de Assistência Social de Cascavel</span></article>
-            <article><span class="journey-year">2025–2028</span><span class="journey-label">Vereador · 18ª Legislatura · Podemos</span></article>
-          </div>
+        <div class="journey-social">
+          <h3>Experiência pública</h3>
+          <ol class="career-list">
+            <li><strong>18 anos</strong><span>Servidor público municipal com atuação em Assistência Social</span></li>
+            <li><strong>2017–2024</strong><span>Secretário Municipal de Assistência Social de Cascavel</span></li>
+            <li><strong>2025–2028</strong><span>Vereador · 18ª Legislatura</span></li>
+          </ol>
         </div>
-        <div class="jingle-list reveal">
-          <h3>Fale com o gabinete</h3>
-          <a class="jingle-row" href="tel:+554533218800"><span>TEL</span><strong>(45) 3321-8800</strong><small>Gabinete Parlamentar</small></a>
-          <a class="jingle-row" href="tel:+5545999531462"><span>WA</span><strong>(45) 9 9953-1462</strong><small>WhatsApp / Celular</small></a>
-          <a class="jingle-row" href="mailto:gabinetehudsonmoreschi@gmail.com"><span>@</span><strong>gabinetehudsonmoreschi@gmail.com</strong><small>E-mail oficial</small></a>
-          <a class="jingle-row" href="https://www.instagram.com/hudsonjrmoreschi" target="_blank" rel="noopener"><span>IG</span><strong>@hudsonjrmoreschi</strong><small>Instagram</small></a>
+        <div class="jingle-list">
+          <h3>Contato do gabinete</h3>
+          <a class="jingle-row" href="tel:+554533218800"><strong>(45) 3321-8800</strong><small>Telefone do gabinete</small></a>
+          <a class="jingle-row" href="https://wa.me/5545999531462" target="_blank" rel="noopener"><strong>(45) 9 9953-1462</strong><small>WhatsApp do gabinete</small></a>
+          <a class="jingle-row" href="mailto:gabinetehudsonmoreschi@gmail.com"><strong>gabinetehudsonmoreschi@gmail.com</strong><small>E-mail do gabinete</small></a>
+          <a class="jingle-row" href="https://www.instagram.com/hudsonjrmoreschi" target="_blank" rel="noopener"><strong>@hudsonjrmoreschi</strong><small>Instagram</small></a>
         </div>
       </div>
     </div>
@@ -296,7 +251,6 @@
             <div><dt>Partido</dt><dd>PODEMOS</dd></div>
             <div><dt>Mandato</dt><dd>2025 – 2028</dd></div>
             <div><dt>Legislatura</dt><dd>18ª Legislatura</dd></div>
-            <div><dt>Votação em 2024</dt><dd>2.346 votos</dd></div>
             <div><dt>Endereço</dt><dd>Rua Pernambuco, 1843 · Centro · Cascavel/PR · CEP 85810-021</dd></div>
           </dl>
         </div>
@@ -312,52 +266,53 @@
     </div>
   </section>
 
-  <!-- BOLSOZAP — número gigante de fundo -->
+  <!-- CONTATO -->
   <section class="bolsozap-section" id="participe">
     <div class="container bolsozap-grid">
-      <div class="reveal">
-        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>Participe</span>
-        <h2>Se você também acredita, <em>vem de Zap!</em></h2>
-        <p>Sugestões, reclamações e pautas do seu bairro chegam mais rápido pelo WhatsApp do gabinete.</p>
-        <strong>Canal direto com o vereador — sem intermediários.</strong>
-      </div>
-      <div class="bolsozap-action reveal">
-        <span class="bolsozap-action__number">00</span>
-        <small>Vereador Hudson Moreschi · Podemos</small>
-        <a class="btn btn--solid btn--big" href="https://wa.me/5545999531462" target="_blank" rel="noopener">CHAMAR NO WHATSAPP</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER — faixa full-color -->
-  <section class="newsletter-section" id="newsletter">
-    <div class="container newsletter-grid">
       <div>
-        <h2>A agenda e as principais atualizações<br>no seu e-mail</h2>
+        <h2>Fale com o <em>gabinete</em></h2>
+        <p>Envie uma sugestão, dúvida ou demanda do seu bairro pelos canais de atendimento.</p>
       </div>
-      <form class="newsletter-form" id="newsletterForm" action="mailto:gabinetehudsonmoreschi@gmail.com" method="post" enctype="text/plain">
-        <input type="email" name="email" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail">
-        <button class="btn btn--dark" type="submit">QUERO RECEBER</button>
-      </form>
+      <div class="bolsozap-action">
+        <a class="btn btn--solid btn--big" href="https://wa.me/5545999531462" target="_blank" rel="noopener">Abrir conversa no WhatsApp</a>
+        <a class="contact-email" href="mailto:gabinetehudsonmoreschi@gmail.com">Enviar e-mail ao gabinete</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="brand__mark">HM</span>
-      <span>Hudson <strong>Moreschi</strong> · Vereador</span>
+    <div class="footer-main">
+      <div class="footer-identity">
+        <a class="footer-brand" href="#topo" aria-label="Hudson Moreschi, voltar ao início">
+          <span class="brand__mark" aria-hidden="true">HM</span>
+          <span class="footer-brand__copy">
+            <strong>Hudson Moreschi</strong>
+            <small>Vereador · Cascavel/PR</small>
+          </span>
+        </a>
+        <p class="footer-signoff">Cascavel pra frente.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <h2 class="footer-label">Explore o site</h2>
+        <a href="#sobre">Trajetória</a>
+        <a href="#propostas">Propostas</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#gabinete">Gabinete</a>
+      </nav>
+      <div class="footer-contact">
+        <h2 class="footer-label">Fale com o gabinete</h2>
+        <a href="https://wa.me/5545999531462" target="_blank" rel="noopener">WhatsApp do gabinete</a>
+        <a href="https://www.instagram.com/hudsonjrmoreschi" target="_blank" rel="noopener">Instagram <span>@hudsonjrmoreschi</span></a>
+        <a href="https://www.camaracascavel.pr.gov.br/a-camara/vereadores/hudson-marcio-moreschi-junior/" target="_blank" rel="noopener">Página oficial na Câmara</a>
+      </div>
     </div>
-    <nav class="footer-nav">
-      <a href="#sobre">Sobre</a>
-      <a href="#propostas">Prioridades</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#gabinete">Gabinete</a>
-      <a href="https://www.instagram.com/hudsonjrmoreschi" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.camaracascavel.pr.gov.br/a-camara/vereadores/hudson-marcio-moreschi-junior/" target="_blank" rel="noopener">Câmara</a>
-    </nav>
-    <p class="footer-note">Mandato 2025–2028 · 18ª Legislatura · Cascavel/PR · Foto: Flávio Olsenheimer (Câmara Municipal de Cascavel)</p>
+    <div class="footer-bottom">
+      <p class="footer-note">Mandato 2025–2028 · 18ª Legislatura · Cascavel/PR · Foto: Flávio Olsenheimer (Câmara Municipal de Cascavel)</p>
+      <a class="footer-top-link" href="#topo">Voltar ao início ↑</a>
+    </div>
   </div>
 </footer>
 
