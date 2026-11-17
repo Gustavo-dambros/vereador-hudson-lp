@@ -308,6 +308,11 @@ h3 { font-size:1.45rem; line-height:1.04; letter-spacing:-.035em; }
   .proposal-copy h3 { font-size:1.05rem; }
   .proposal-card__media span { width:52px; height:52px; font-size:1.65rem; }
 }
+.proposal-card__media span { font-size:1.2rem; font-weight:950; letter-spacing:.05em; }
+.news-image span { font-size:1.2rem; font-weight:950; letter-spacing:.04em; }
+.jingle-row > span { font-size:.68rem; font-weight:950; letter-spacing:.03em; }
+.map-card__pin::after { content:""; width:14px; height:14px; border:3px solid #fff; border-radius:50%; background:var(--green-deep); transform:rotate(45deg); }
+
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
   *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
