@@ -12,12 +12,12 @@ A seleção principal deve ser curta e priorizar resultados com autoria ou coaut
 2. **Política de atendimento a vítimas de acidentes de trânsito — Lei Municipal nº 7.913/2026.** O SAPL registra o PLO 217/2025, de autoria de Hudson, como convertido na Lei Ordinária nº 7.913, sancionada em 22 de abril de 2026. A evidência confirma a criação legal da política, não a implantação/entrega de serviços; manter essa ressalva até localizar prova de execução.
 3. **Mês da Indústria — Lei Municipal nº 7.889/2026 e evento público.** O SAPL associa o PLO 89/2025, de Hudson, à Lei nº 7.889, de 13 de março de 2026. A Tribuna da Cidade publicou relato posterior do evento de abertura na ACIC, realizado em maio de 2026, com lideranças do setor produtivo. Pode ser mostrado como lei e programação realizada, sem prometer impacto econômico que não foi mensurado.
 
-A página `index.html` apresenta esses três casos com links para as fontes, rotulando claramente o status. Não se afirma que uma sanção, por si só, prova a execução integral de uma política pública.
+A seção `#realizacoes` em `index.html` foi organizada como uma vitrine de cinco projetos, com espaços reservados para imagens, resumos, status legislativo e links para fontes. Os três itens com lei sancionada/ação realizada ficam acompanhados de dois projetos aprovados em segundo turno cuja sanção não foi confirmada nas fontes consultadas. Não se afirma que uma sanção, por si só, prova a execução integral de uma política pública.
 
 ## Itens não incluídos como realização confirmada
 
-- **Parentalidade positiva (PLO 87/2025):** a notícia da Câmara de 1º de dezembro de 2025 registra aprovação do projeto de autoria de Hudson e diz que a medida valeria após publicação oficial. Não foi localizada, nas buscas feitas, a norma sancionada/publicada correspondente. Manter fora da lista de leis em vigor até confirmar o número e o texto da lei no SAPL/Diário Oficial. Fonte da votação: [Câmara — projeto de práticas parentais positivas](https://www.camaracascavel.pr.gov.br/comunicacao/noticias/aprovada-lei-que-incentiva-cuidado-das-criancas-sem-violencia-e-com-mais-vinculo/).
-- **Empresa Promotora da Saúde Mental (PLO 74/2025):** há evidência de votação em segundo turno em 26 de agosto de 2025, mas não foi localizada confirmação de lei sancionada. Não apresentar como lei vigente.
+- **Parentalidade positiva (PLO 87/2025):** a Câmara registra aprovação por unanimidade em segundo turno em 2 de dezembro de 2025. Não foi localizada a norma municipal sancionada/publicada correspondente; no card aparece apenas como projeto aprovado, sem chamá-lo de lei vigente. Fontes: [Câmara — votação em segundo turno](https://www.camaracascavel.pr.gov.br/comunicacao/noticias/saiba-como-foram-as-votacoes-na-sessao-de-2-de-dezembro-de-2025/) e [SAPL — PLO 87/2025](https://sapl.cascavel.pr.leg.br/materia/35915).
+- **Empresa Promotora da Saúde Mental (PLO 74/2025):** o SAPL registra aprovação por unanimidade no segundo turno em 26 de agosto de 2025. Não foi localizada confirmação de lei sancionada/publicada; no card consta apenas como aprovado em segundo turno. Fonte: [SAPL — Ordem do Dia da sessão](https://sapl.cascavel.pr.leg.br/sessao/1228/ordemdia).
 - **Desconecta Cascavel (PLO 88/2025):** a fonte localizada comprova somente a aprovação em primeiro turno em 29 de setembro de 2025. Excluir da lista de realizações concluídas.
 - **Conviver & Aprender (PLO 82/2026):** aprovação unânime informada em agosto de 2026, mas não confirmada a publicação/sanção. Não apresentar como lei vigente.
 - **Junho Branco — número da lei:** a notícia oficial confirma sanção da proposta PLO 24/2025 em 6 de junho de 2025, mas não foi possível confirmar com segurança o número da lei no registro disponível. A página usa “lei do Junho Branco” e o link da notícia, sem inventar número.
@@ -64,7 +64,9 @@ O roxo e o verde forte foram indicados pelo solicitante. A tentativa de consulta
 - [Anúncio prévio e entrevista sobre o evento — CBN Cascavel](http://www.radiocbncascavel.com.br/noticia/cascavel-lanca-mes-da-industria-com-evento-no-dia-12-de-maio)
 - [Semana Municipal do Seguro, Lei 7.916/2026 — SAPL](https://sapl.cascavel.pr.leg.br/materia/37087) (confirmada, mas não selecionada como destaque principal por ser uma instituição de calendário, de menor evidência de ação do que os três itens acima).
 - [PLO 74/2025 — SAPL, saúde mental no trabalho](https://sapl.cascavel.pr.leg.br/materia/35817)
+- [Votação em segundo turno do PLO 74/2025 — SAPL](https://sapl.cascavel.pr.leg.br/sessao/1228/ordemdia)
 - [PLO 87/2025 — SAPL, parentalidade positiva](https://sapl.cascavel.pr.leg.br/materia/35915)
+- [Votação em segundo turno do PLO 87/2025 — Câmara](https://www.camaracascavel.pr.gov.br/comunicacao/noticias/saiba-como-foram-as-votacoes-na-sessao-de-2-de-dezembro-de-2025/)
 - [PLO 88/2025 — SAPL, Desconecta Cascavel](https://sapl.cascavel.pr.leg.br/materia/35916)
 - [PLO 125/2025 — SAPL, inteligência artificial (outros proponentes)](https://sapl.cascavel.pr.leg.br/materia/36775)
 
