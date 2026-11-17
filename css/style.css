@@ -154,7 +154,7 @@ h3 { font-size:1.45rem; line-height:1.04; letter-spacing:-.035em; }
 .project-card:nth-child(2) .project-image-slot small { color:rgba(255,255,255,.72); }
 .project-card:nth-child(3) .project-image-slot { color:#075c3b; background:linear-gradient(140deg,rgba(0,166,81,.14),rgba(0,122,61,.03)),#eff7f2; }
 .project-copy { display:flex; min-height:265px; flex-direction:column; align-items:flex-start; padding:22px 23px 21px; }
-.project-status { display:inline-flex; align-items:center; min-height:25px; margin-bottom:13px; padding:5px 10px; border-radius:999px; font-size:.62rem; font-weight:900; line-height:1.3; }
+.project-status { display:inline-flex; align-items:center; min-height:25px; margin-bottom:13px; padding:6px 11px; border-radius:12px; font-size:.62rem; font-weight:900; line-height:1.35; text-wrap:balance; }
 .project-status--done { color:#075c3b; background:rgba(0,166,81,.1); }
 .project-status--vote { color:#714100; background:rgba(210,145,34,.15); }
 .project-copy h3 { color:var(--purple-ink); font-size:1.38rem; line-height:1.04; }
