@@ -149,6 +149,9 @@ h3 { font-size:1.45rem; line-height:1.04; letter-spacing:-.035em; }
 .news-tag { display:block; margin-bottom:10px; color:var(--green-deep); font-size:.64rem; font-weight:950; letter-spacing:.12em; text-transform:uppercase; }
 .news-body h3 { color:var(--purple-ink); }
 .news-body p { margin-top:10px; color:var(--muted); font-size:.85rem; }
+.news-card__sources { display:flex; flex-wrap:wrap; gap:9px 16px; margin-top:17px; padding-top:13px; border-top:1px solid var(--line); }
+.news-card__sources a { color:var(--purple-deep); font-size:.73rem; font-weight:900; text-decoration:none; }
+.news-card__sources a:hover { color:var(--green-deep); text-decoration:underline; text-underline-offset:3px; }
 
 /* Jornada: painel editorial e linhas de contato */
 .journey-section { padding:100px 0; background:var(--paper); }
