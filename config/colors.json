@@ -1,0 +1,17 @@
+{
+  "activePreset": "hudson",
+  "presets": {
+    "hudson": {
+      "green": "#087b48",
+      "greenDark": "#075d38",
+      "greenLight": "#e4f1e9",
+      "purple": "#622194",
+      "purpleDeep": "#622194",
+      "purpleSoft": "#eee8f4",
+      "paper": "#F2F2F2",
+      "white": "#F2F2F2",
+      "black": "#0D0D0D",
+      "gray": "#8C8C8C"
+    }
+  }
+}

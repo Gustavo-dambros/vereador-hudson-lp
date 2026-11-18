@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "colors:sync": "node scripts/sync-colors.mjs",
+    "prebuild": "npm run colors:sync",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

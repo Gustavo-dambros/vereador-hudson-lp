@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
@@ -9,7 +9,8 @@ const photos = {
   hudson: '/assets/img/hudson-oficial.jpg',
   working: '/assets/img/sem-legenda/imagem_trabalhando2-sem-legenda.jpg',
   book: '/assets/img/sem-legenda/visita_gabinete-sem-legenda.jpg',
-    campaign: '/img/vape-zero-campanha.jpg',
+  race: '/assets/img/hudson-corrida.jpg',
+  campaign: '/img/vape-zero-campanha.jpg',
 };
 
 const projects = [
@@ -53,7 +54,7 @@ const projects = [
     ],
   },
   {
-    image: photos.official,
+    image: photos.book,
     imageAlt: 'Hudson em atividade pública',
     imageText: 'Políticas públicas começam pelas famílias.',
     status: 'PLO 87/2025 · 2º turno aprovado · sanção não confirmada',
@@ -89,6 +90,14 @@ const areas = [
   ['Participação dos moradores', 'Escuta de bairros, entidades, comércio e moradores pelo gabinete.'],
 ];
 
+const impactNumbers = [
+  { value: '2.346', label: 'votos recebidos', detail: 'Eleição municipal de 2024' },
+  { value: '18', label: 'anos no serviço público', detail: 'Atuação municipal em Cascavel' },
+  { value: '23', label: 'escolas alcançadas', detail: 'Ações realizadas em 2025' },
+  { value: '7', label: 'anos como secretário', detail: 'Assistência Social · 2017–2024' },
+  { value: '+20', label: 'projetos apresentados*', detail: 'Número declarado em entrevista · 2025' },
+  { value: '+1.000', label: 'reuniões realizadas*', detail: 'Número declarado em entrevista · 2025' },
+];
 function Arrow({ diagonal = false }) {
   return <span aria-hidden="true" className="arrow">{diagonal ? '↗' : '→'}</span>;
 }
@@ -96,7 +105,7 @@ function Arrow({ diagonal = false }) {
 function Brand({ footer = false }) {
   return (
     <a className={footer ? 'brand footer-brand' : 'brand'} href="#topo" aria-label="Hudson Moreschi, voltar ao início">
-      <span className="brand-mark" aria-hidden="true">HM</span>
+      <img className="brand-logo" src="/favicon.svg" alt="" aria-hidden="true" />
       <span className="brand-copy">
         <span className="brand-name">Hudson <strong>Moreschi</strong></span>
         <span className="brand-role">Vereador · Cascavel/PR</span>
@@ -203,13 +212,15 @@ function HumanMoments() {
     <section className="human-section" id="alem-do-gabinete">
       <div className="container human-section__grid">
         <div className="human-section__copy">
-          <h2>Fora do <em>plenário</em></h2>
-          <p>Um mandato se faz perto das pessoas: ouvindo, acompanhando demandas e trabalhando também fora do plenário.</p>
+          <p className="eyebrow"><span className="eyebrow__dot" />Além da vida pública</p>
+          <h2>Antes do cargo, existe <em>a pessoa</em></h2>
+          <p>Fora da rotina do gabinete, Hudson cultiva a corrida de rua como hobby. Na Cascavel Run, realizada em comemoração aos 75 anos de Cascavel, ele celebrou mais uma conquista pessoal em sua cidade.</p>
+          <p>Um momento fora das sessões e das reuniões, mostrando um pouco da pessoa por trás da vida pública.</p>
         </div>
-        <div className="human-section__gallery" role="group" aria-label="Hudson em momentos fora do plenário">
-          <img src={photos.working} alt="Hudson concentrado diante de um notebook" loading="lazy" />
-          <img src={photos.book} alt="Hudson em encontro com uma liderança pública" loading="lazy" />
-        </div>
+        <figure className="human-section__portrait">
+          <img src={photos.race} alt="Hudson sorrindo e segurando a placa de colocação após uma corrida" loading="lazy" />
+          <figcaption>Um momento de conquista fora do plenário.</figcaption>
+        </figure>
       </div>
     </section>
   );
@@ -237,15 +248,18 @@ function Proposals() {
   );
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, index }) {
   return (
     <article className="project-card">
       <div className="project-image-slot" role="img" aria-label={project.imageAlt} style={{ backgroundImage: `url("${project.image}")` }}>
-        <span>{project.imageText}</span>
+        <span className="project-card-number" aria-hidden="true">{index + 1}</span>
+        <span className="project-image-title">{project.title}</span>
+        <a className="project-card-open" href={project.links[0][1]} target="_blank" rel="noopener noreferrer" aria-label={`Consultar fonte oficial: ${project.title}`}>
+          <span aria-hidden="true">+</span>
+        </a>
       </div>
       <div className="project-copy">
         <span className={`project-status project-status--${project.state}`}>{project.status}</span>
-        <h3>{project.title}</h3>
         <p>{project.description}</p>
         <div className="project-sources">
           {project.links.map(([label, href]) => (
@@ -257,17 +271,83 @@ function ProjectCard({ project }) {
   );
 }
 
+function ImpactNumbers() {
+  const cards = (isDuplicate = false) => impactNumbers.map((item) => (
+    <article className="number-card" key={`${isDuplicate ? 'duplicate-' : ''}${item.value}-${item.label}`}>
+      <strong>{item.value}</strong>
+      <h3>{item.label}</h3>
+      <p>{item.detail}</p>
+    </article>
+  ));
+
+  return (
+    <section className="impact-section" aria-labelledby="impact-title">
+      <div className="container">
+        <div className="impact-heading">
+          <div>
+            <p className="eyebrow"><span className="eyebrow__dot" />Números do mandato</p>
+            <h2 id="impact-title">Uma trajetória <em>em números</em></h2>
+          </div>
+        </div>
+      </div>
+      <div className="numbers-track" role="region" aria-label="Carrossel infinito de números importantes">
+        <div className="numbers-track__group">{cards()}</div>
+        <div className="numbers-track__group" aria-hidden="true">{cards(true)}</div>
+      </div>
+      <div className="container">
+        <p className="impact-note">* Projetos apresentados e reuniões: números declarados por Hudson em entrevista, referentes a 2025.</p>
+      </div>
+    </section>
+  );
+}
+
 function Projects() {
+  const trackRef = useRef(null);
+  const [activeCard, setActiveCard] = useState(0);
+
+  const updateActiveCard = () => {
+    const track = trackRef.current;
+    if (!track) return;
+    const cards = [...track.querySelectorAll('.project-card')];
+    if (!cards.length) return;
+    const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
+    const nearest = cards.reduce((best, card, index) => {
+      const bounds = card.getBoundingClientRect();
+      const center = bounds.left + bounds.width / 2;
+      return Math.abs(center - trackCenter) < best.distance ? { index, distance: Math.abs(center - trackCenter) } : best;
+    }, { index: 0, distance: Infinity });
+    setActiveCard(nearest.index);
+  };
+
+  const goToCard = (index) => {
+    const track = trackRef.current;
+    const card = track?.querySelectorAll('.project-card')[index];
+    if (!track || !card) return;
+    const trackBounds = track.getBoundingClientRect();
+    const cardBounds = card.getBoundingClientRect();
+    const offset = cardBounds.left + cardBounds.width / 2 - (trackBounds.left + track.clientWidth / 2);
+    track.scrollTo({ left: track.scrollLeft + offset, behavior: 'smooth' });
+    setActiveCard(index);
+  };
+
   return (
     <section className="news-home-section projects-section" id="projetos" aria-labelledby="projectsTitle">
       <div className="container">
         <div className="section-head project-section-head">
           <p className="eyebrow"><span className="eyebrow__dot" />Mandato em foco</p>
-          <h2 id="projectsTitle">Projetos do Hudson <em>em destaque</em></h2>
-          <p>Propostas, leis e ações com seus respectivos status e fontes para consulta.</p>
+          <h2 id="projectsTitle">MEUS <em>PROJETOS</em></h2>
+          <h3 className="project-section-subtitle">Propostas que refletem a voz da população</h3>
+          <p>Conheça projetos apresentados por Hudson, seus status e as fontes para acompanhar cada proposta.</p>
         </div>
-        <div className="projects-grid">
-          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
+      </div>
+      <div className="container projects-container">
+        <div className="projects-grid" ref={trackRef} onScroll={updateActiveCard} aria-label="Projetos do mandato">
+          {projects.map((project, index) => <ProjectCard key={project.title} project={project} index={index} />)}
+        </div>
+        <div className="projects-carousel-dots" role="group" aria-label="Navegar pelos projetos">
+          {projects.map((project, index) => (
+            <button key={project.title} type="button" className={`carousel-dot${activeCard === index ? ' active' : ''}`} aria-label={`Mostrar projeto ${index + 1}: ${project.title}`} aria-current={activeCard === index ? 'true' : undefined} onClick={() => goToCard(index)} />
+          ))}
         </div>
       </div>
     </section>
@@ -400,6 +480,39 @@ function Footer() {
 }
 
 function App() {
+  useEffect(() => {
+    const loader = document.getElementById('boot-loader');
+    const start = performance.now();
+    let hideTimer;
+    let removeTimer;
+    let cancelled = false;
+
+    const revealSite = () => {
+      if (cancelled) return;
+      document.body.classList.remove('is-loading');
+      if (!loader) return;
+      loader.classList.add('is-leaving');
+      removeTimer = window.setTimeout(() => loader.remove(), 400);
+    };
+
+    const minimumDuration = new Promise((resolve) => {
+      hideTimer = window.setTimeout(resolve, Math.max(0, 1600 - (performance.now() - start)));
+    });
+    const fontRequest = document.fonts?.load('48px Birthstone').catch(() => []) ?? Promise.resolve();
+    const fontReady = Promise.race([
+      fontRequest,
+      new Promise((resolve) => window.setTimeout(resolve, 350)),
+    ]);
+
+    Promise.all([minimumDuration, fontReady]).then(revealSite);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(hideTimer);
+      window.clearTimeout(removeTimer);
+    };
+  }, []);
+
   return (
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -408,6 +521,7 @@ function App() {
         <Hero />
         <Biography />
         <HumanMoments />
+        <ImpactNumbers />
         <Proposals />
         <Projects />
         <FollowMandate />

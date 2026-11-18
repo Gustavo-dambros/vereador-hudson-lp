@@ -3,17 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#25123d" />
+    <meta name="theme-color" content="#622194" />
     <meta name="description" content="Conheça a trajetória, os projetos e os canais de atendimento do vereador Hudson Moreschi, em Cascavel." />
     <meta property="og:title" content="Hudson Moreschi | Vereador de Cascavel" />
     <meta property="og:description" content="Trajetória, projetos e atendimento do mandato 2025–2028." />
     <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Hudson Moreschi | Vereador de Cascavel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Birthstone&display=swap" rel="stylesheet" />
+    <style>
+      body.is-loading #root { visibility: hidden; }
+      #boot-loader { position: fixed; z-index: 2000; inset: 0; display: grid; place-items: center; background: #F2F2F2; color: #0D0D0D; opacity: 1; transition: opacity 380ms ease; }
+      #boot-loader__content { display: grid; justify-items: center; gap: 12px; }
+      #boot-loader__name { opacity: 0; font-family: 'Birthstone', cursive; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1; animation: loader-name-in 380ms ease-out 240ms forwards; }
+      #boot-loader__track { width: 116px; height: 2px; overflow: hidden; background: rgba(13,13,13,.12); }
+      #boot-loader__bar { display: block; width: 100%; height: 100%; background: #0D0D0D; transform: scaleX(0); transform-origin: left center; animation: loader-progress 1050ms linear 120ms forwards; }
+      @keyframes loader-name-in { to { opacity: 1; transform: translateY(0); } }
+      #boot-loader__name { transform: translateY(5px); }
+      @keyframes loader-progress { 0% { transform: scaleX(.015); } 40% { transform: scaleX(.14); } 82% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
+      #boot-loader.is-leaving { opacity: 0; pointer-events: none; }
+      @media (prefers-reduced-motion: reduce) {
+        #boot-loader { transition-duration: 1ms; }
+        #boot-loader__name { animation-duration: 1ms; animation-delay: 0ms; }
+        #boot-loader__bar { animation-duration: 1ms; animation-delay: 0ms; }
+      }
+    </style>
   </head>
-  <body>
+  <body class="is-loading">
+    <div id="boot-loader" role="status" aria-live="polite" aria-label="Carregando o site de Hudson Moreschi">
+      <div id="boot-loader__content">
+        <span id="boot-loader__name">Hudson Moreschi</span>
+        <span id="boot-loader__track" aria-hidden="true"><span id="boot-loader__bar"></span></span>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
